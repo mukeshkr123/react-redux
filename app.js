@@ -1,4 +1,4 @@
-const { createAction } = require("@reduxjs/toolkit");
+const { createAction, nanoid } = require("@reduxjs/toolkit");
 
 //IntialState
 const IntialState = {
@@ -9,9 +9,18 @@ const IntialState = {
 const increment = createAction("INCREMENT");
 const decrement = createAction("DECREMENT");
 const resetCounter = createAction("RESET");
-const incrementBy = createAction("INCREMENT_BY");
 
-console.log(increment(20));
+// customise createAction
+const incrementBy = createAction("INCREMENT_BY", (amount, user) => {
+  return {
+    payload: {
+      amount,
+      user,
+      id: nanoid(),
+    },
+  };
+});
 
+console.log(incrementBy(20, "emma"));
 //Reducer
 //Store
