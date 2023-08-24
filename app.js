@@ -20,8 +20,9 @@ const incrementBy = createAction("INCREMENT_BY", (amount) => {
 });
 
 // create Reducer
+
 // 1. Builder callback notation
-createReducer(IntialState, (builder) => {
+const counterSlice = createReducer(IntialState, (builder) => {
   //increment
   builder.addCase(increment, (state) => {
     state.counter += 1;
@@ -38,6 +39,26 @@ createReducer(IntialState, (builder) => {
   builder.addCase(incrementBy, (state, action) => {
     state.action += action.payload.amount;
   });
+});
+
+// 1. map callback notation
+const counterSlice2 = createAction(IntialState, {
+  // increment
+  [increment]: (state) => {
+    state.counter += 1;
+  },
+  //decrement
+  [decrement]: (state) => {
+    state.counter -= 1;
+  },
+  //reset
+  [resetCounter]: (state) => {
+    state.counter = 0;
+  },
+  //incrementBy
+  [incrementBy]: (state, action) => {
+    state.counter += action.payload.amount;
+  },
 });
 
 //Store
