@@ -1,0 +1,9 @@
+1. createAction => Action Creator + Action types
+
+2. createReducer => It's the easiest way of creating Redux reducer functions
+
+3. CreateSlice => createAction + createReducer to generate actions and reducer
+
+4. createAsyncThunk => Handle Async Actions (redux-thunk)
+
+5. configureStore => Easiest way to create redux store
