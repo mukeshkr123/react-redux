@@ -44,3 +44,15 @@
 
      -> name = is used in action types , and it must be unique ,it represent a particular reducer in the state
      -> reducer = it handle specific action type/implement business logic
+
+5.ReduxThunk
+
+-> Redux Thunk is a middleware that allows you to write asynchronous actions 
+
+       -> its the recomended approach for handling async request lifecycles
+       -> this Api has eliminated the traditional of installing redux thunk for async actions 
+       -> it returns a promise
+
+                    -> Pending
+       ReduxThunk   -> Fulfilled
+                    -> Rejected
