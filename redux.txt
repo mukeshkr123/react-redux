@@ -29,3 +29,18 @@
 -> we can directly mutate the data because it uses immer internally
 -> It doesn't use switch or case statement
 -> There are two types of creating reducers (builder callback or map object notation)
+
+4. createSlice 
+
+-> it simplifies the creation of action creators and reducers
+-> createSlice = createAction + createReducer
+-> it doesn't use switch or case statement
+-> Each slice reducer "owns" its state independently
+-> this Api is standard approch for writing redux logic
+
+                           -> name
+          createSlice =    -> intialState 
+                           -> reducer/extraReducer
+
+     -> name = is used in action types , and it must be unique ,it represent a particular reducer in the state
+     -> reducer = it handle specific action type/implement business logic
