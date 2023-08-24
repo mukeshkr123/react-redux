@@ -16,3 +16,16 @@
 -> The action creator can be called with or without a payload
 -> By default it accepts one parameter (action type) but can customized
 -> action type is a required as a parameter
+
+2. Reducer =>  A reducer is a function that recieves the current state and an action object , decides how to update the state base on the actuin , and returns the new state
+  
+  -> rule of reducer :-
+       => The new state value should only be calculates based on the state and action arguments 
+       => Reducers are not allowed to modify the existing state
+
+3. createReducer 
+
+-> It's the easiest way to creating Redux reducer functions
+-> we can directly mutate the data because it uses immer internally
+-> It doesn't use switch or case statement
+-> There are two types of creating reducers (builder callback or map object notation)
