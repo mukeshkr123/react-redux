@@ -7,3 +7,12 @@
 4. createAsyncThunk => Handle Async Actions (redux-thunk)
 
 5. configureStore => Easiest way to create redux store
+
+===>
+
+1. createAction
+
+-> it combines action type constants and the action together to create action Creator
+-> The action creator can be called with or without a payload
+-> By default it accepts one parameter (action type) but can customized
+-> action type is a required as a parameter
